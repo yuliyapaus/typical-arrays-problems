@@ -1,12 +1,17 @@
 
 exports.min = function min (array) {
-  return 0;
+  if (array===undefined || !array || array.length===0) {return 0}
+  return Math.min(...array);
 }
 
 exports.max = function max (array) {
-  return 0;
+  if (array===undefined || !array || array.length===0) {return 0}
+  return Math.max(...array);
 }
 
 exports.avg = function avg (array) {
-  return 0;
+  if (array===undefined || !array || array.length===0) {return 0};
+  let total = 0;
+  array.map(function (i) {total += +i})
+  return total/array.length;
 }
